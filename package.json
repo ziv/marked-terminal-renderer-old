@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.15.0",
-    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-commonjs": "^28.0.9",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@semantic-release/changelog": "^5.0.1",
