@@ -2,10 +2,9 @@
   "name": "marked-terminal-renderer",
   "version": "1.1.5",
   "description": "marked terminal renderer",
-  "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
+  "scripts": {
+    "example": "tsx ./examples/example.mts"
+  },
   "keywords": [
     "marked",
     "extension",
@@ -15,14 +14,6 @@
     "md",
     "markdown"
   ],
-  "scripts": {
-    "test": "jest",
-    "test:cover": "jest --coverage",
-    "format": "eslint --fix src/*.ts && prettier --write src/*.ts",
-    "lint": "eslint src/*.ts",
-    "build": "rm -rf lib && tsc && rollup -c rollup.config.esm.js",
-    "prepare": "npm run build"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ziv/marked-terminal-renderer.git"
@@ -33,85 +24,27 @@
     "url": "https://github.com/ziv/marked-terminal-renderer/issues"
   },
   "homepage": "https://github.com/ziv/marked-terminal-renderer#readme",
-  "peerDependencies": {
-    "marked": "2.0.0"
+  "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2",
+    "cli-highlight": "^2.1.11",
+    "cli-table3": "^0.6.5",
+    "got": "^14.6.5",
+    "node-emoji": "^2.2.0",
+    "terminal-image": "^4.1.0",
+    "terminal-link": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "^7.15.0",
-    "@rollup/plugin-commonjs": "^20.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.0.4",
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/commit-analyzer": "^8.0.1",
-    "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.2.3",
-    "@semantic-release/npm": "^7.1.3",
-    "@semantic-release/release-notes-generator": "^9.0.3",
-    "@types/jest": "^26.0.24",
-    "@types/marked": "^2.0.4",
-    "@types/node": "^16.6.1",
-    "@types/node-emoji": "^1.8.1",
-    "@typescript-eslint/eslint-plugin": "^4.29.2",
-    "@typescript-eslint/parser": "^4.31.1",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-prettier": "^3.4.1",
-    "jest": "^27.1.0",
-    "jest-cli": "^27.0.4",
-    "marked": "^3.0.2",
-    "prettier": "^2.3.2",
-    "rollup": "^2.53.1",
-    "semantic-release": "^17.4.4",
-    "ts-jest": "^27.0.5",
-    "tslib": "^2.3.1",
-    "typescript": "^4.3.5"
+    "@tsconfig/node24": "^24.0.3",
+    "@types/node": "^25.0.2",
+    "marked": "^17.0.1"
   },
-  "dependencies": {
-    "chalk": "^4.1.2",
-    "cli-highlight": "^2.1.11",
-    "cli-table3": "^0.6.0",
-    "node-emoji": "^1.11.0",
-    "word-wrap": "^1.2.3"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node"
-  },
-  "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "project": "tsconfig.json",
-      "sourceType": "module"
-    },
+  "release": {
     "plugins": [
-      "@typescript-eslint/eslint-plugin"
-    ],
-    "extends": [
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended"
-    ],
-    "root": true,
-    "env": {
-      "node": true,
-      "jest": true
-    },
-    "ignorePatterns": [
-      "src/*.js",
-      "src/*.js.map",
-      "src/*.d.ts"
-    ],
-    "rules": {
-      "@typescript-eslint/interface-name-prefix": "off",
-      "@typescript-eslint/explicit-function-return-type": "off",
-      "@typescript-eslint/explicit-module-boundary-types": "off",
-      "@typescript-eslint/no-unused-vars": "off"
-    }
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
   },
-  "prettier": {
-    "tabWidth": 2,
-    "singleQuote": true,
-    "trailingComma": "none",
-    "bracketSpacing": true,
-    "arrowParens": "avoid"
-  }
 }

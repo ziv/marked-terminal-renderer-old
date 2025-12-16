@@ -1,44 +1,44 @@
-import { Chalk } from 'chalk';
+import { ChalkInstance } from "chalk";
 
 export interface CliRendererOptions {
   // terminal
   lineLength: number;
   indent: string;
-  mode?: 'dark' | 'light';
+  mode?: "dark" | "light";
 
   // text
-  strongStyle: Chalk;
-  emStyle: Chalk;
-  delStyle: Chalk;
+  strongStyle: ChalkInstance;
+  emStyle: ChalkInstance;
+  delStyle: ChalkInstance;
 
   // heading
-  headingLevels: string[];
-  headingStyle: Chalk;
+  headingLevels: ChalkInstance[];
+  headingStyle: ChalkInstance;
 
   // code
-  codeStyle: Chalk;
-  codeInfoStyle: Chalk;
+  codeStyle: ChalkInstance;
+  codeInfoStyle: ChalkInstance;
 
   // block-quote
   quotePadding: number;
   quoteChar: string;
-  quoteStyle: Chalk;
+  quoteStyle: ChalkInstance;
 
   // hr
   hrChar: string;
-  hrStyle: Chalk;
+  hrStyle: ChalkInstance;
 
   // lists
-  listStyle: Chalk;
+  listStyle: ChalkInstance;
   listChar: string;
 
   // checkbox
   cbCheckedChar: string;
   cbUncheckedChar: string;
-  cbStyle: Chalk;
+  cbStyle: ChalkInstance;
 
   // link
-  linkStyle: Chalk;
+  linkStyle: ChalkInstance;
 
   // table
   // todo complete options
@@ -46,8 +46,10 @@ export interface CliRendererOptions {
 }
 
 export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+
 export type InfoString = string | undefined;
+
 export type CellFlags = {
   header: boolean;
-  align: 'center' | 'left' | 'right' | null;
+  align: "center" | "left" | "right" | null;
 };

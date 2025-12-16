@@ -1,5 +1,0 @@
-lib
-**/*.min.js
-release.config.js
-rollup.config.esm.js
-**/*.d.ts

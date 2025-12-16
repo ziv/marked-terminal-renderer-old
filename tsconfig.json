@@ -1,28 +1,3 @@
 {
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "lib": [
-      "es2019",
-      "es2020",
-      "esnext"
-    ],
-    "declaration": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noEmitOnError": false,
-    "rootDir": "src",
-    "outDir": "lib",
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true,
-    "strictNullChecks": true,
-    "target": "es2019",
-    "types": [
-      "node",
-      "jest"
-    ]
-  },
-  "exclude": [
-    "tmp",
-    "examples"
-  ]
+  "extends": "@tsconfig/node24/tsconfig.json"
 }
